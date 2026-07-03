@@ -185,3 +185,62 @@ width: 254px;
  gap: 10px;
 }    
 }
+/* Signature Guests */
+.signature-swiper{
+    margin-top: 24px;
+}
+.signature-swiper .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signature-slide-title{
+    margin-top: 24px;
+font-family: "EB Garamond", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.36;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #f5b041;
+}
+.signature-slide-text{
+    margin-top: 8px;
+    text-align: center;
+        color: #fefed8;
+        width: 327px;
+}
+
+.next-btn{
+    margin-top: 24px;
+    background-color: inherit;
+    border: none;
+display: flex;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+@media only screen and (min-width: 1440px) {
+.signature-swiper {
+        margin-top: 48px;
+}
+.signature-swiper .swiper-wrapper{
+width: 1088px;
+height: 730px;
+margin-left: auto;
+margin-right: auto;
+gap: 32px;
+
+}
+    .signature-swiper .swiper-slide {
+padding: 64px 0px 0px;
+    width: 341px;
+    height: 730px;
+    }
+.signature-swiper .s2{
+   padding-top: 0;
+}
+    .next-btn {
+display: none;
+    }
+}
