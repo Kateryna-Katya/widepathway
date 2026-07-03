@@ -258,3 +258,30 @@ padding-left: 0;
 gap: 32px;
 }   
 }
+/* Gallery */
+.gallery-swiper{
+    margin-top: 24px;
+}
+.desk{
+    display: none;
+}
+@media only screen and (min-width: 1440px) {
+.desk{
+    display: block;
+}
+.gallery-swiper {
+    margin-top: 48px;
+}
+.gallery-swiper .swiper-wrapper{
+flex-wrap: wrap;
+gap: 32px;
+}
+.gallery-swiper .swiper-slide{
+width: 528px;
+    height: 439px;
+}
+.gallery-swiper .swiper-slide img{
+    width: 100%;
+    height: auto;
+}
+}
