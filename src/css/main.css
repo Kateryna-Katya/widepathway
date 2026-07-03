@@ -244,3 +244,17 @@ padding: 64px 0px 0px;
 display: none;
     }
 }
+/* Advantages */
+.advantages-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+@media only screen and (min-width: 1440px) {
+ .advantages-container{
+flex-direction: row-reverse;
+padding-left: 0;
+gap: 32px;
+}   
+}
