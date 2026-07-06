@@ -285,3 +285,112 @@ width: 528px;
     height: auto;
 }
 }
+.back-faq{
+background-image: url("/img/faq/mob.png");    
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+}
+@media only screen and (min-width: 1440px) {
+.back-faq{
+background-image: url("/img/faq/desk.png");    
+}    
+}
+/* faq */
+.faq-acc {
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.faq-acc-el {
+    position: relative;
+    transition: margin-bottom 0.3s ease;
+    border: none;
+border-bottom: 1px solid #f5b041;
+    padding: 20px 0px;
+    width: 343px;
+}
+
+
+
+.faq-acc-el-trigger {
+    background: inherit;
+font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.44;
+    color: #fefed8;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border: none;
+    width: 100%;
+
+}
+
+
+.faq-acc-arr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    background-color: inherit;
+}
+
+.faq-acc-arr.is-hidden {
+    display: none;
+}
+
+.faq-acc-el-descr-frame {
+    background: none;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, border-bottom 0.3s ease;
+}
+
+.faq-acc-el.js-enabled .faq-acc-el-descr-frame {
+    visibility: hidden;
+}
+
+
+
+.faq-acc-el.open .faq-acc-el-descr-frame {
+    visibility: visible;
+    opacity: 1;
+    border: none;
+    background: none;
+    padding-top: 16px;
+    text-align: left;
+    max-height: 500px;
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .faq-acc {
+        width: 640px;
+        margin: 48px auto 0;
+    }
+.faq-acc-el{
+width: 640px;
+}
+}
+/* Contact */
+.contact-link{
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.44;
+        color: #f5b041;
+}

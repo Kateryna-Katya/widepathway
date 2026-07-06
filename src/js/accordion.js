@@ -1,0 +1,28 @@
+document.querySelectorAll('.faq-acc-el-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const parentElement = trigger.closest('.faq-acc-el');
+        const panel = parentElement.querySelector('.faq-acc-el-descr-frame');
+        const svg = trigger.querySelector('svg');
+        const isOpen = parentElement.classList.contains('open');
+
+        const plusIcon = `
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 9C18 9.19891 17.921 9.38968 17.7803 9.53033C17.6397 9.67098 17.4489 9.75 17.25 9.75H9.75V17.25C9.75 17.4489 9.67098 17.6397 9.53033 17.7803C9.38968 17.921 9.19891 18 9 18C8.80109 18 8.61032 17.921 8.46967 17.7803C8.32902 17.6397 8.25 17.4489 8.25 17.25V9.75H0.75C0.551088 9.75 0.360322 9.67098 0.21967 9.53033C0.0790178 9.38968 0 9.19891 0 9C0 8.80109 0.0790178 8.61032 0.21967 8.46967C0.360322 8.32902 0.551088 8.25 0.75 8.25H8.25V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61032 0.0790178 8.80109 0 9 0C9.19891 0 9.38968 0.0790178 9.53033 0.21967C9.67098 0.360322 9.75 0.551088 9.75 0.75V8.25H17.25C17.4489 8.25 17.6397 8.32902 17.7803 8.46967C17.921 8.61032 18 8.80109 18 9Z" fill="#F5B041" />
+</svg>`;
+
+        const minusIcon = `
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 12C21 12.1989 20.921 12.3897 20.7803 12.5303C20.6397 12.671 20.4489 12.75 20.25 12.75H3.75C3.55109 12.75 3.36032 12.671 3.21967 12.5303C3.07902 12.3897 3 12.1989 3 12C3 11.8011 3.07902 11.6103 3.21967 11.4697C3.36032 11.329 3.55109 11.25 3.75 11.25H20.25C20.4489 11.25 20.6397 11.329 20.7803 11.4697C20.921 11.6103 21 11.8011 21 12Z" fill="#F5B041" />
+</svg>`;
+
+        if (!isOpen) {
+            parentElement.classList.add('open');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            svg.outerHTML = minusIcon;
+        } else {
+            parentElement.classList.remove('open');
+            panel.style.maxHeight = '0';
+            svg.outerHTML = plusIcon;
+        }
+    });
+});
